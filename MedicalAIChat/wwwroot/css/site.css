@@ -35,17 +35,18 @@ body {
   overflow: hidden;
   border-radius: 10px;
   position: relative;
+  padding: 15px;
 }
 
 .chats {
   width: 100%;
-  padding: 0, 15px;
+  padding: 0;
   color: white;
   position: relative;
   font-size: .8em;
 }
 .GPT-chat {
-  width: 75%;
+  width: 70%;
   word-wrap: break-word;
   background-color: rgb(170, 169, 169);
   padding: 10px 10px;
@@ -59,5 +60,50 @@ body {
   background-color: #69aef8;
   padding: 10px 10px;
   border-radius: 10px 10px 0 10px;
-  margin: 10px, 10px;
+  margin: 10px 0 10px auto;
 }
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(209, 235, 245);
+  padding: 20px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+}
+
+.chat-input input {
+  width: calc(100% - 40px);
+  height: 100%;
+  background-color: white;
+  border-radius: 50px;
+  color: black;
+  font-size: 1.2em;
+  padding: 0 15px;
+
+}
+
+.send-msg {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  overflow: hidden;
+  position: relative;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+
+}
+
+.send-msg:active {
+  transform: scale(0.85);
+}
+
+.send-msg img  {
+  width: 100%;
+  height: 100%;
+}
+
