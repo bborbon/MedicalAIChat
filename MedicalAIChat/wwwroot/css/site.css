@@ -19,4 +19,45 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #69aef8;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-box {
+  width: 600px;
+  height: 800px;
+  background-color: rgb(209, 235, 245);
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.chats {
+  width: 100%;
+  padding: 0, 15px;
+  color: white;
+  position: relative;
+  font-size: .8em;
+}
+.GPT-chat {
+  width: 75%;
+  word-wrap: break-word;
+  background-color: rgb(170, 169, 169);
+  padding: 10px 10px;
+  border-radius: 10px 10px 10px 0;
+  margin: 10px, 10px;
+}
+
+.client {
+  width: 75%;
+  word-wrap: break-word;
+  background-color: #69aef8;
+  padding: 10px 10px;
+  border-radius: 10px 10px 0 10px;
+  margin: 10px, 10px;
 }
