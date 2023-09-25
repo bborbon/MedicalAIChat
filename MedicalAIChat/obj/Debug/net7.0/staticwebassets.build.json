@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EjjbzqNDAultL+n4gzhHmYi1DbAS77DoAvukRY4vP4s=",
+  "Hash": "XT2FHzTQEqRAoPJkfuUoi6v7J1iuM/i00K52uYdBPrk=",
   "Source": "MedicalAIChat",
   "BasePath": "_content/MedicalAIChat",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "c:\\Users\\lbere\\OneDrive\\Documents\\develop\\C#\\MedicalAIChat\\MedicalAIChat\\wwwroot\\img\\send-button.png",
+      "SourceId": "MedicalAIChat",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\lbere\\OneDrive\\Documents\\develop\\C#\\MedicalAIChat\\MedicalAIChat\\wwwroot\\",
+      "BasePath": "_content/MedicalAIChat",
+      "RelativePath": "img/send-button.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\send-button.png"
+    },
+    {
+      "Identity": "c:\\Users\\lbere\\OneDrive\\Documents\\develop\\C#\\MedicalAIChat\\MedicalAIChat\\wwwroot\\img\\send.png",
+      "SourceId": "MedicalAIChat",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\lbere\\OneDrive\\Documents\\develop\\C#\\MedicalAIChat\\MedicalAIChat\\wwwroot\\",
+      "BasePath": "_content/MedicalAIChat",
+      "RelativePath": "img/send.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\send.png"
     },
     {
       "Identity": "c:\\Users\\lbere\\OneDrive\\Documents\\develop\\C#\\MedicalAIChat\\MedicalAIChat\\wwwroot\\js\\site.js",

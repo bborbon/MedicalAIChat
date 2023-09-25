@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "c:\\Users\\lbere\\OneDrive\\Documents\\develop\\C#\\MedicalAIChat\\MedicalAIChat\\wwwroot\\img\\send-button.png",
+      "PackagePath": "staticwebassets\\img\\send-button.png"
+    },
+    {
+      "Id": "c:\\Users\\lbere\\OneDrive\\Documents\\develop\\C#\\MedicalAIChat\\MedicalAIChat\\wwwroot\\img\\send.png",
+      "PackagePath": "staticwebassets\\img\\send.png"
+    },
+    {
       "Id": "c:\\Users\\lbere\\OneDrive\\Documents\\develop\\C#\\MedicalAIChat\\MedicalAIChat\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
