@@ -19,14 +19,36 @@
             </div>
             
             <div class="chat-input">
-                <input type="text" placeholder="Enter message here"/>
-                <button class="send-msg">
+                <input id="messageInput" type="text" placeholder="Enter message here"/>
+                <button class="send-msg" onclick="sendMedicalDiagnosis()">
                     <img src="img/send-button.png" alt="send-button">
                 </button>
             </div>
         </div>
     </div>
-
-
-
 </div>
+
+<script type="text/javascript">
+    function sendMedicalDiagnosis() {
+        var message = document.getElementById('messageInput').value;
+        fetch('@Url.Action("MedicalDiagnosisAsync", "Home")', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(message),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Append the response to your chat
+            var chatDiv = document.getElementsByClassName('chats')[0];
+            var responseDiv = document.createElement('div');
+            responseDiv.className = 'GPT';
+            responseDiv.innerHTML = '<div class="GPT-chat">' + data + '</div>';
+            chatDiv.appendChild(responseDiv);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    }
+</script>

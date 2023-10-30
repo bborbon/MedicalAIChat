@@ -1,0 +1,62 @@
+# ASP.NET Core Project Configuration Setup
+
+This document outlines the setup for handling sensitive data (e.g., API keys) in an ASP.NET Core project using a custom configuration file named `appsettings.Sensitive.json`.
+
+## Setup Steps
+
+1. **Create `appsettings.Sensitive.json` File**:
+   - Create a new file named `appsettings.Sensitive.json` in the root of your project.
+   - Add your sensitive data to this file in the following format:
+     ```json
+     {
+       "OpenAI": {
+         "ApiKey": "your_api_key_here"
+       }
+     }
+     ```
+
+2. **Exclude `appsettings.Sensitive.json` from Version Control**:
+   - Add the following line to your `.gitignore` file to ensure `appsettings.Sensitive.json` is not tracked by Git:
+     ```plaintext
+     appsettings.Sensitive.json
+     ```
+
+3. **Load `appsettings.Sensitive.json` in `Program.cs`**:
+   - Modify your `Program.cs` file to load the `appsettings.Sensitive.json` file into the configuration:
+     ```csharp
+     var builder = WebApplication.CreateBuilder(args);
+
+     // Add custom configuration file
+     builder.Configuration.AddJsonFile("appsettings.Sensitive.json", optional: true, reloadOnChange: true);
+
+     // ... rest of your code ...
+     ```
+
+4. **Access Sensitive Data in Your Controller**:
+   - Inject `IConfiguration` into your controller and use it to access your sensitive data:
+     ```csharp
+     public class HomeController : Controller
+     {
+         private readonly IConfiguration _configuration;
+
+         public HomeController(IConfiguration configuration)
+         {
+             _configuration = configuration;
+         }
+
+         [HttpPost("api/medical-diagnosis")]
+         public async Task<IActionResult> MedicalDiagnosisAsync([FromBody] string prompt)
+         {
+             var apiKey = _configuration.GetValue<string>("OpenAI:ApiKey");
+             var client = new OpenAIClient(apiKey);
+
+             // ... rest of your code ...
+         }
+     }
+     ```
+
+## Note
+
+- Ensure the `appsettings.Sensitive.json` file is kept secure and not shared publicly as it contains sensitive data.
+- The `optional: true` parameter in the `AddJsonFile` method call allows the app to run even if the `appsettings.Sensitive.json` file is missing, which can be useful in environments where these settings are provided through other means (e.g., environment variables or a secret management service).
+

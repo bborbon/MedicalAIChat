@@ -1,0 +1,4 @@
+.env
+appsettings.Sensitive.json
+bin
+obj

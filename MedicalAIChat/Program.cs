@@ -1,5 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Configuration.AddJsonFile("appsettings.Sensitive.json", optional: true, reloadOnChange: true);
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -19,6 +21,12 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "medical-diagnosis",
+    pattern: "api/medical-diagnosis",
+    defaults: new { controller = "Home", action = "MedicalDiagnosisAsync" }
+);
 
 app.MapControllerRoute(
     name: "default",
