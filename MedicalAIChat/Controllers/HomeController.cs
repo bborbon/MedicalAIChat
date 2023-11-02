@@ -46,12 +46,9 @@ public class HomeController : Controller
 
         var completion = await client.GetChatCompletionsAsync("gpt-3.5-turbo", options);
 
-        ChatCompletions a = completion.Value;
-
         var jsonResponse = JsonConvert.SerializeObject(completion.Value);
 
         return Content(jsonResponse, "application/json");
     }
 }
-
 

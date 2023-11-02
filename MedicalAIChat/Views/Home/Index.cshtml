@@ -44,7 +44,7 @@
             var chatDiv = document.getElementsByClassName('chats')[0];
             var responseDiv = document.createElement('div');
             responseDiv.className = 'GPT';
-            responseDiv.innerHTML = '<div class="GPT-chat">' + data + '</div>';
+            responseDiv.innerHTML = '<div class="GPT-chat">' + data.Choices[0].Message.Content + '</div>';
             chatDiv.appendChild(responseDiv);
         })
         .catch((error) => {
