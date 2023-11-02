@@ -31,6 +31,8 @@ body {
 .chat-box {
   width: 600px;
   height: 800px;
+  display: flex;
+  flex-direction: column;
   background-color: rgb(209, 235, 245);
   overflow: hidden;
   border-radius: 10px;
@@ -40,7 +42,10 @@ body {
 
 .chats {
   width: 100%;
+  flex: 1;
+  overflow-y: auto; /* to enable vertical scrolling */
   padding: 0;
+  margin-bottom: 15px;
   color: white;
   position: relative;
   font-size: .8em;
@@ -64,26 +69,25 @@ body {
 }
 
 .chat-input {
+
   display: flex;
   align-items: center;
-  width: 100%;
-  height: 70px;
-  background-color: rgb(209, 235, 245);
-  padding: 20px;
-  overflow: hidden;
-  position: absolute;
-  bottom: 0;
+  justify-content: space-evenly;
 }
 
-.chat-input input {
-  width: calc(100% - 40px);
-  height: 100%;
-  background-color: white;
-  border-radius: 50px;
+.chat-input textarea {
+  width: calc(80% - 20px);
+  border: none;
+  border-radius: 20px;
   color: black;
-  font-size: 1.2em;
+  background-color: white;
+  font-size: 1.2 em;
   padding: 0 15px;
-
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  min-height: 10px;
+  max-height: 100px;
 }
 
 .send-msg {
@@ -98,12 +102,10 @@ body {
 
 }
 
-.send-msg:active {
-  transform: scale(0.85);
-}
-
 .send-msg img  {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
